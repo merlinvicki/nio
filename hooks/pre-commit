@@ -1,0 +1,21 @@
+#!/bin/sh
+# nio pre-commit hook
+# Installed by: npx nio install
+
+echo "🔍 Running pre-commit checks..."
+echo ""
+
+# Format staged files (no-op if lint-staged isn't configured)
+npx --no-install lint-staged 2>/dev/null
+
+# Scan source files for secrets (blocking)
+echo ""
+echo "🔐 Scanning for secrets..."
+npx nio secrets || exit 1
+
+# Lint (skips automatically if ESLint isn't installed)
+echo ""
+echo "🧹 Linting..."
+npx nio eslint
+
+exit $?

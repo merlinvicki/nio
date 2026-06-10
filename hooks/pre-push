@@ -1,0 +1,10 @@
+#!/bin/sh
+# nio pre-push hook
+# Installed by: npx nio install
+
+echo "🔒 Running all quality gates before push..."
+echo ""
+
+npx nio all
+
+exit $?

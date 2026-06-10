@@ -1,0 +1,56 @@
+{
+	"name": "@merlinvicki/nio",
+	"version": "2.0.0",
+	"type": "module",
+	"description": "Quality gates for developers: security, secrets, licenses, ESLint, Stylelint, types, dead code, and accessibility — one command, one actionable report",
+	"license": "MIT",
+	"author": "merlinvicki",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/merlinvicki/nio.git"
+	},
+	"keywords": [
+		"security",
+		"supply-chain",
+		"secrets",
+		"license",
+		"pre-commit",
+		"audit",
+		"eslint",
+		"stylelint",
+		"typescript",
+		"accessibility",
+		"axe",
+		"quality-gates",
+		"knip"
+	],
+	"bin": {
+		"nio": "cli.js"
+	},
+	"files": [
+		"cli.js",
+		"install.js",
+		"runner.js",
+		"gates/",
+		"lib/",
+		"configs/",
+		"hooks/",
+		"nio.config.json"
+	],
+	"scripts": {
+		"test": "node runner.js"
+	},
+	"dependencies": {
+		"@secretlint/secretlint-rule-preset-recommend": ">=13",
+		"audit-ci": ">=7",
+		"license-checker": ">=25",
+		"lockfile-lint": ">=5",
+		"secretlint": ">=13"
+	},
+	"optionalDependencies": {
+		"retire": ">=5"
+	},
+	"engines": {
+		"node": ">=18"
+	}
+}
