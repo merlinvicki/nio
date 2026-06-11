@@ -1,6 +1,6 @@
 {
 	"name": "@merlinvicki/nio",
-	"version": "2.0.0",
+	"version": "2.0.2",
 	"type": "module",
 	"description": "Quality gates for developers: security, secrets, licenses, ESLint, Stylelint, types, dead code, and accessibility — one command, one actionable report",
 	"license": "MIT",
