@@ -16,10 +16,12 @@ import stylelint from './gates/stylelint.js';
 import typecheck from './gates/typecheck.js';
 import deadcode from './gates/deadcode.js';
 import a11y from './gates/a11y.js';
+import playwright from './gates/playwright.js';
+import memory from './gates/memory.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export const GATES = [supplyChain, secrets, license, eslint, stylelint, typecheck, deadcode, a11y];
+export const GATES = [supplyChain, secrets, license, eslint, stylelint, typecheck, deadcode, a11y, playwright, memory];
 
 export function getGate(id) {
 	return GATES.find((g) => g.id === id);

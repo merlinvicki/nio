@@ -7,7 +7,9 @@
 		"stylelint": { "enabled": "auto", "blocking": false },
 		"typecheck": { "enabled": "auto", "blocking": true },
 		"deadcode": { "enabled": "auto", "blocking": false },
-		"a11y": { "enabled": false, "blocking": false, "urls": ["http://localhost:4321"] }
+		"a11y": { "enabled": false, "blocking": false, "urls": ["http://localhost:4321"] },
+		"playwright": { "enabled": "auto", "blocking": true },
+		"memory": { "enabled": false, "blocking": false, "url": "http://localhost:4321" }
 	},
 	"scanTargets": ["src", "workers", "tests", "public"],
 	"ignoreDirs": ["node_modules", "dist", "test-results", ".astro", ".git"],
